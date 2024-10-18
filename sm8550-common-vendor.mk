@@ -780,6 +780,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/init/shsusrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/shsusrd.rc \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
+    vendor/oneplus/sm8550-common/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/init/vendor.qti.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider-service_64.rc \
@@ -827,6 +828,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/ltm_config_samsung_AMB670YF07_FS_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_samsung_AMB670YF07_FS_dsc_cmd_mode_panel.xml \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/ltm_config_samsung_AMB670YF08_CS_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_samsung_AMB670YF08_CS_dsc_cmd_mode_panel.xml \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/ltm_config_samsung_AMB670YF08_FS_dsc_cmd_mode_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ltm_config_samsung_AMB670YF08_FS_dsc_cmd_mode_panel.xml \
+    vendor/oneplus/sm8550-common/proprietary/vendor/etc/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/media_codecs_kalama.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kalama.xml \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/media_codecs_kalama_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kalama_vendor.xml \
     vendor/oneplus/sm8550-common/proprietary/vendor/etc/media_codecs_performance_kalama.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kalama.xml \
@@ -1315,13 +1317,16 @@ PRODUCT_PACKAGES += \
     libcv_common \
     libcwb_client_vendor \
     libcwb_qcom \
+    libdapparamstorage \
     libdataitems \
+    libdeccfg \
     libdiag \
     libdigital-dimming \
     libdisp-aba \
     libdisplayconfig.qti \
     libdisplayqos \
     libdisplayskuutils \
+    libdlbdsservice \
     libdpmqmihal \
     libdpps \
     libdrmfs \
@@ -1600,6 +1605,8 @@ PRODUCT_PACKAGES += \
     libssc \
     libssc_default_listener \
     libssd \
+    libstagefright_soft_ac4dec \
+    libstagefright_soft_ddpdec \
     libstandbyfeature \
     libstreamparser \
     libswregistrationalgo \
@@ -1678,6 +1685,9 @@ PRODUCT_PACKAGES += \
     libasphere \
     libquasar \
     libshoebox \
+    libswdap \
+    libswgamedap \
+    libswvqe \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
     vendor.display.color@1.2 \
@@ -1687,6 +1697,8 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.6 \
     vendor.display.color@1.7 \
     vendor.display.postproc@1.0 \
+    vendor.dolby.hardware.dms@2.0-impl \
+    vendor.dolby.hardware.dms@2.0 \
     vendor.libdpmctmgr \
     vendor.libdpmfdmgr \
     vendor.libdpmframework \
@@ -2423,6 +2435,7 @@ PRODUCT_PACKAGES += \
     qconfigservice \
     qcrilNrd \
     vendor.display.color@1.0-service \
+    vendor.dolby.hardware.dms@2.0-service \
     vendor.qti.camera.provider-service_64 \
     vendor.qti.esepowermanager@1.1-service \
     vendor.qti.hardware.alarm@1.0-service \
